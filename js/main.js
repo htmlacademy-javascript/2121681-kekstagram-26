@@ -112,11 +112,6 @@ function createPhotoDescription(){
   };
 }
 
-//required post count
 const REQUIRED_PHOTO_COUNT = 25;
 
-//array of photos
 const arrayPhotoObject = Array.from({length: REQUIRED_PHOTO_COUNT}, createPhotoDescription);
-
-
-console.log(JSON.stringify(arrayPhotoObject, null, 2));
