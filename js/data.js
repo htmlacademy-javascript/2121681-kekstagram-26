@@ -65,7 +65,7 @@ let counter = 0;
 function createPhotoPost(){
   counter++;
   return {
-    id : getUniqueRandomPhotoId(1, 100),
+    id : getUniqueRandomPhotoId(1, 25),
     url : `photos/${counter}.jpg`,
     description : getRandomArrayElement(DESCRIPTION),
     likes : getRandom(Like.MIN, Like.MAX),
