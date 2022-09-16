@@ -65,17 +65,17 @@ let counter = 0;
 function createPhotoPost(){
   counter++;
   return {
-    id : getUniqueRandomPhotoId(1, 100),
+    id : getUniqueRandomPhotoId(1, 25),
     url : `photos/${counter}.jpg`,
     description : getRandomArrayElement(DESCRIPTION),
     likes : getRandom(Like.MIN, Like.MAX),
-    comment : Array.from({length: getRandom(1, 10)}, createNewComment),  //from 1 to 10 comments
+    comments : Array.from({length: getRandom(1, 10)}, createNewComment),  //from 1 to 10 comments
   };
 }
 
 //required post count
 const REQUIRED_PHOTO_COUNT = 25;
 //array of photos
-const arrayPhotoObject = Array.from({length: REQUIRED_PHOTO_COUNT}, createPhotoPost);
+const arrayPhotoObject = () => Array.from({length: REQUIRED_PHOTO_COUNT}, createPhotoPost);
 
 export {arrayPhotoObject};

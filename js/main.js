@@ -1,5 +1,2 @@
 import { arrayPhotoObject } from './data.js';
-
-console.log(
-  arrayPhotoObject
-);
+import { similarPhotoPost, pictureBlock } from './img.js';
